@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="320" height="320" viewBox="0 0 320 320">
+  <defs>
+    <pattern id="grid" width="80" height="80" patternUnits="userSpaceOnUse">
+      <path d="M80 0H0V80" fill="none" stroke="#080958" stroke-opacity=".2" stroke-width="1"/>
+      <path d="M1 80V1H80" fill="none" stroke="#686aff" stroke-opacity=".06" stroke-width="1"/>
+    </pattern>
+    <filter id="grain" x="0" y="0" width="100%" height="100%">
+      <feTurbulence type="fractalNoise" baseFrequency=".85" numOctaves="3" seed="17" stitchTiles="stitch"/>
+      <feColorMatrix type="saturate" values="0"/>
+    </filter>
+  </defs>
+  <path d="M0 0H80V80H0ZM160 80H240V160H160ZM80 240H160V320H80Z" fill="#020343" opacity=".035"/>
+  <path d="M240 0H320V80H240ZM80 160H160V240H80ZM240 240H320V320H240Z" fill="#b0b2ff" opacity=".025"/>
+  <rect width="320" height="320" fill="url(#grid)"/>
+  <rect width="320" height="320" filter="url(#grain)" opacity=".12" style="mix-blend-mode:soft-light"/>
+</svg>
